@@ -1,255 +1,305 @@
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  background: #f7f9fb;
-  color: #222;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 4vw;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2d7ff9;
-  letter-spacing: 1px;
-}
-
-header nav {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.btn-primary, .btn-secondary {
-  padding: 0.7em 1.6em;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, #2d7ff9 60%, #00c6fb 100%);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(45,127,249,0.08);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, #1a5fd0 60%, #009ec3 100%);
-}
-
-.btn-secondary {
-  background: #f0f4fa;
-  color: #2d7ff9;
-  border: 1px solid #e0e7ef;
-}
-
-.btn-secondary:hover {
-  background: #e0e7ef;
-}
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 4vw 3rem 4vw;
-  background: linear-gradient(120deg, #eaf6ff 60%, #f7f9fb 100%);
-}
-
-.hero-content {
-  max-width: 500px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #2d7ff9;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #444;
-}
-
-.hero-img {
-  width: 380px;
-  max-width: 90vw;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(45,127,249,0.08);
-  margin-top: 2rem;
-}
-
-.features {
-  padding: 4rem 4vw 2rem 4vw;
-  background: #fff;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #2d7ff9;
-}
-
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.feature-card {
-  background: #f7f9fb;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(45,127,249,0.04);
-  padding: 2rem 1.5rem;
-  max-width: 300px;
-  flex: 1 1 220px;
-}
-
-.feature-card h3 {
-  color: #2d7ff9;
-  margin-bottom: 0.7rem;
-}
-
-.pricing {
-  padding: 4rem 4vw 2rem 4vw;
-  background: #f7f9fb;
-  text-align: center;
-}
-
-.pricing h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #2d7ff9;
-}
-
-.pricing-tiers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.pricing-card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(45,127,249,0.06);
-  padding: 2.5rem 2rem;
-  max-width: 280px;
-  flex: 1 1 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pricing-card.featured {
-  border: 2px solid #2d7ff9;
-  transform: scale(1.05);
-  z-index: 1;
-}
-
-.pricing-card h3 {
-  color: #2d7ff9;
-  margin-bottom: 0.5rem;
-}
-
-.price {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 1rem 0;
-  color: #222;
-}
-
-.price span {
-  font-size: 1rem;
-  color: #888;
-}
-
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 2rem 0;
-  color: #444;
-}
-
-.pricing-card ul li {
-  margin-bottom: 0.5rem;
-}
-
-.contact {
-  padding: 4rem 4vw 2rem 4vw;
-  background: #fff;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #2d7ff9;
-}
-
-.contact-form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 1em;
-  border-radius: 6px;
-  border: 1px solid #e0e7ef;
-  font-size: 1rem;
-  font-family: inherit;
-  resize: none;
-}
-
-.contact-form button {
-  align-self: flex-end;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background: #f0f4fa;
-  color: #888;
-  font-size: 1rem;
-  margin-top: 2rem;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 4vw 2rem 4vw;
-  }
-  .hero-img {
-    margin-top: 2rem;
-  }
-  .features-list,
-  .pricing-tiers {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fintech SaaS - Cool Landing Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      background: #f6faff;
+      color: #222;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 5vw;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a73e8;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .btn {
+      padding: 0.7em 1.6em;
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #1a73e8 60%, #00c6fb 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(26,115,232,0.08);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #155ab6 60%, #009ec3 100%);
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 5vw 3rem 5vw;
+      background: linear-gradient(120deg, #eaf6ff 60%, #f6faff 100%);
+    }
+    .hero-content {
+      max-width: 500px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1a73e8;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+    .hero-img {
+      width: 380px;
+      max-width: 90vw;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(26,115,232,0.08);
+      margin-top: 2rem;
+    }
+    .features {
+      padding: 4rem 5vw 2rem 5vw;
+      background: #fff;
+      text-align: center;
+    }
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1a73e8;
+    }
+    .features-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .feature-card {
+      background: #f6faff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(26,115,232,0.04);
+      padding: 2rem 1.5rem;
+      max-width: 300px;
+      flex: 1 1 220px;
+    }
+    .feature-card h3 {
+      color: #1a73e8;
+      margin-bottom: 0.7rem;
+    }
+    .pricing {
+      padding: 4rem 5vw 2rem 5vw;
+      background: #f6faff;
+      text-align: center;
+    }
+    .pricing h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1a73e8;
+    }
+    .pricing-tiers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .pricing-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(26,115,232,0.06);
+      padding: 2.5rem 2rem;
+      max-width: 280px;
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing-card.featured {
+      border: 2px solid #1a73e8;
+      transform: scale(1.05);
+      z-index: 1;
+    }
+    .pricing-card h3 {
+      color: #1a73e8;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      color: #222;
+    }
+    .price span {
+      font-size: 1rem;
+      color: #888;
+    }
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem 0;
+      color: #444;
+    }
+    .pricing-card ul li {
+      margin-bottom: 0.5rem;
+    }
+    .contact {
+      padding: 4rem 5vw 2rem 5vw;
+      background: #fff;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1a73e8;
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1em;
+      border-radius: 6px;
+      border: 1px solid #e0e7ef;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: none;
+    }
+    .contact-form button {
+      align-self: flex-end;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #eaf6ff;
+      color: #888;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 5vw 2rem 5vw;
+      }
+      .hero-img {
+        margin-top: 2rem;
+      }
+      .features-list,
+      .pricing-tiers {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">FinCool</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="btn btn-primary">Sign Up</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Finance, Reimagined for You</h1>
+      <p>Experience the next generation of fintech SaaS. Effortless management, smart analytics, and secure growth—all in one place.</p>
+      <a href="#" class="btn btn-primary">Start Free Trial</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Fintech dashboard" class="hero-img"/>
+  </section>
+  <section id="features" class="features">
+    <h2>Awesome Features</h2>
+    <div class="features-list">
+      <div class="feature-card">
+        <h3>Live Insights</h3>
+        <p>Monitor your finances in real-time with beautiful dashboards and instant alerts.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Smart Automation</h3>
+        <p>Automate reports, payments, and more. Save time and reduce errors.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Top-Tier Security</h3>
+        <p>Bank-level encryption and compliance to keep your data safe and private.</p>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" class="pricing">
+    <h2>Transparent Pricing</h2>
+    <div class="pricing-tiers">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p class="price">$0<span>/mo</span></p>
+        <ul>
+          <li>Basic Analytics</li>
+          <li>Email Support</li>
+          <li>Up to 3 Users</li>
+        </ul>
+        <a href="#" class="btn">Try Free</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Pro</h3>
+        <p class="price">$29<span>/mo</span></p>
+        <ul>
+          <li>Advanced Analytics</li>
+          <li>Priority Support</li>
+          <li>Unlimited Users</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p class="price">Contact</p>
+        <ul>
+          <li>Custom Integrations</li>
+          <li>Dedicated Manager</li>
+          <li>Custom SLAs</li>
+        </ul>
+        <a href="#" class="btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="How can we help?" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 FinCool. All rights reserved.</p>
+  </footer>
+</body>
